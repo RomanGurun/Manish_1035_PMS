@@ -13,7 +13,11 @@ const SingleProduct = () => {
     // delete product
     const deleteProduct = async()=>{
         // api hit to delete
-       const response = await axios.delete("https://652fbacd6c756603295d8ebc.mockapi.io/products/" + id)
+      //  const response = await axios.delete("https://652fbacd6c756603295d8ebc.mockapi.io/products/" + id)
+
+
+      const response = await axios.delete("https://662d26660547cdcde9e012c2.mockapi.io/products/" + id);
+
        if(response.status == 200){
         navigate("/")
        }else{
@@ -23,7 +27,10 @@ const SingleProduct = () => {
 
     // fetch single product
    const fetchSingleProduct = async ()=>{
-    const response = await axios.get("https://652fbacd6c756603295d8ebc.mockapi.io/products/" + id)
+    // const response = await axios.get("https://652fbacd6c756603295d8ebc.mockapi.io/products/" + id)
+
+    const respsonse = await axios.get("https://662d26660547cdcde9e012c2.mockapi.io/products/"+id);
+    
     setProduct(response.data)
  
    }

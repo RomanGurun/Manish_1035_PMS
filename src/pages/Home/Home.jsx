@@ -9,7 +9,9 @@ const Home = () => {
     // const navigate = useNavigate()
     const [products,setProducts ] = useState([])
     const fetchProducts = async ()=>{
-     const response =   await axios.get("https://652fbacd6c756603295d8ebc.mockapi.io/products")
+    //  const response =   await axios.get("https://652fbacd6c756603295d8ebc.mockapi.io/products")
+    
+const response = await axios.get('https://662d26660547cdcde9e012c2.mockapi.io/products');
      setProducts(response.data)
         
     }

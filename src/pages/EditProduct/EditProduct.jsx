@@ -23,7 +23,9 @@ const EditProduct = () => {
 
     const editProduct = async (e)=>{
         e.preventDefault()
-        const response = await axios.put("https://652fbacd6c756603295d8ebc.mockapi.io/products/" + id,product )
+        // const response = await axios.put("https://652fbacd6c756603295d8ebc.mockapi.io/products/" + id,product )
+        
+const response = await axios.put("https://662d26660547cdcde9e012c2.mockapi.io/products"+id);
         if(response.status == 200){
             navigate("/singleProduct/" + id)
         }else{
@@ -34,7 +36,9 @@ const EditProduct = () => {
 
     // fetch product of id 
     const fetchProduct  = async()=>{
-        const response = await axios.get("https://652fbacd6c756603295d8ebc.mockapi.io/products/" + id)
+        // const response = await axios.get("https://652fbacd6c756603295d8ebc.mockapi.io/products/" + id)
+        const response=await axios.get("https://662d26660547cdcde9e012c2.mockapi.io/products/"+id);
+
         setProduct(response.data)
     }
 
